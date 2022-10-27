@@ -1,0 +1,122 @@
+/* components/tesla-swiper/index.wxss */
+.swiper {
+    width: 100%;
+    height: 90vh;
+    position: relative;
+}
+
+.swiper image {
+    height: 100%;
+    width: 100%;
+}
+
+.swiper-float-content {
+    /* 元素永远不会成为鼠标事件 */
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+}
+
+.swiper-float-content .title {
+    margin-top: 15vh;
+    font-size: 80rpx;
+}
+
+.swiper-float-content .descriptions-area {
+    width: 76%;
+    margin-top: 40vh;
+    display: flex;
+    justify-content: space-between;
+    /* text-align: center; */
+}
+
+.swiper-float-content .descriptions-area .description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.swiper-float-content .descriptions-area .description .description-title {
+    margin-bottom: 12rpx;
+    font-size: 40rpx;
+    animation: fadeIn 1s;
+}
+
+.swiper-float-content .descriptions-area .description .description-subtitle {
+    font-size: 26rpx;
+    animation: fadeIn 2s;
+}
+
+.swiper-float-content .book-btn {
+    width: 80vw;
+    position: relative;
+    margin-top: 54rpx;
+    border-radius: 80rpx;
+    z-index: 1;
+}
+
+.book-btn button {
+    width: 100%;
+    height: 100%;
+    padding: 18rpx 0;
+    background: none;
+    font-size: 24rpx;
+    color: #fff;
+    z-index: 1;
+    pointer-events: all;
+
+}
+
+.book-btn .book-btn-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 80rpx;
+    background-color: rgba(60, 60, 60, 0.6);
+}
+
+.swiper-float-content .view-config {
+    /*取消穿透*/
+    pointer-events: all;
+    margin-top: 24rpx;
+    font-size: 26rpx;
+    color: #fff;
+    text-decoration: underline;
+}
+
+.swiper-float-content .swiper-dots {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.swiper-float-content .swiper-dots .dot {
+    width: 45rpx;
+    height: 5rpx;
+    margin-top: 48rpx;
+    border: none;
+    background-color: rgba(255, 255, 255, .4);
+}
+
+.swiper-dots .dot.active {
+    background-color: rgba(255, 255, 255, 1)
+}

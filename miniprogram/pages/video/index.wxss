@@ -1,0 +1,134 @@
+.video-page {
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    background-color: #efefef;
+}
+
+.video-player {
+    height: 510rpx;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.video-player .video {
+    width: 100vw;
+    height: 420rpx;
+    position: inherit;
+}
+
+.video-player .video-title {
+    height: 90rpx;
+    width: 100vw;
+    position: fixed;
+    top: 420rpx;
+    line-height: 90rpx;
+    padding-left: 34rpx;
+    font-size: 32rpx;
+    background-color: #fff;
+    z-index: 999;
+}
+
+.video-list-area {
+    padding-left: 34rpx;
+    padding-right: 34rpx;
+    /* background-color:darkseagreen; */
+}
+
+.video-list-area .product-name {
+    width: 100vw;
+    height: 75rpx;
+    padding-left: 34rpx;
+    position: fixed;
+    top: 509rpx;
+    left: 0;
+    line-height: 75rpx;
+    font-size: 30rpx;
+    background-color: #efefef;
+    box-sizing: border-box;
+}
+
+.video-list-area .product-name>image {
+    width: 35rpx;
+    height: 35rpx;
+    position: absolute;
+    top: 51%;
+    left: 198rpx;
+    transform: translateY(-50%);
+}
+
+.video-list-area .video-category-area {
+    width: 100vw;
+    height: 70rpx;
+    padding-left: 34rpx;
+    padding-right: 34rpx;
+    position: fixed;
+    top: 582rpx;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    line-height: 70rpx;
+    font-size: 30rpx;
+    background-color: #efefef;
+    box-sizing: border-box;
+}
+
+.video-category-list {
+    display: flex;
+    justify-content: space-between
+}
+
+.video-list-area .video-category-area .video-category-item {
+    height: 100%;
+    font-size: 26rpx;
+}
+
+.video-list-area .video-list {
+    padding-top:655rpx ;
+}
+
+.video-list-area .video-list .video-item {
+    padding: 0 36rpx;
+}
+
+.video-list .video-item .video-list-title {
+    padding-top: 35rpx;
+    margin-bottom: 25rpx;
+    font-size: 32rpx;
+    font-weight: bold;
+}
+
+.video-list .video-item .video-list-items {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.video-list-items .video-list-box {
+    height: 230rpx;
+    width: 47%;
+    margin-bottom: 10rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-list-items .video-list-box .video-list-item {
+    width: 100%;
+    height: 170rpx;
+    border-radius: 20rpx;
+    background-color: #fff;
+}
+
+.video-list-items .video-list-box .video-item-name {
+    height: 60rpx;
+    line-height: 60rpx;
+    font-size: 24rpx;
+}
+
+.van-action-sheet {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}

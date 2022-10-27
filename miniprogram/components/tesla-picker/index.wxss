@@ -1,0 +1,23 @@
+/* components/tesla-picker/index.wxss */
+.picker {
+    position: relative;
+}
+
+.picker .i_class {
+    padding: 15rpx 25rpx;
+}
+
+.label {
+    padding-left: 30rpx;
+    margin-bottom: 10rpx;
+    font-size: 22rpx;
+}
+
+.arrow-down {
+    width: 25rpx;
+    height: 25rpx;
+    position: absolute;
+    right: 30rpx;
+    top: 50%;
+    transform: translateY(-50%);
+}

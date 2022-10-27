@@ -1,0 +1,129 @@
+.activity-page {
+    width: 100vw;
+    height: 100vh;
+    padding: 0 40rpx;
+    box-sizing: border-box;
+}
+
+.location {
+    height: 120rpx;
+}
+
+
+.location>image {
+    height:34rpx;
+    padding-right: 10rpx;
+    line-height: 1;
+    vertical-align: bottom;
+}
+
+.location .name {
+    font-size: 32rpx;
+    padding-right: 10rpx;
+    font-weight: bold;
+    display: inline;
+    line-height: 1;
+    vertical-align: bottom;
+}
+
+.location .toggle {
+    font-size: 24rpx;
+    text-decoration: underline;
+    color: #333;
+    display: inline;
+    line-height: 1;
+    vertical-align: bottom;
+}
+
+
+.list .title{
+    margin-bottom: 20rpx;
+    font-size: 32rpx;
+}
+
+.list .list-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.list .list-content .list-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 45rpx;
+}
+
+.list-content .list-item .name {
+    font-size: 30rpx;
+    font-weight: bold;
+    margin-bottom: 15rpx
+}
+
+.list-content .list-item .label {
+    height: 26rpx;
+    width: 100rpx;
+    margin-bottom: 15rpx;
+    display: flex;
+    border: 1rpx solid #222;
+}
+
+.list-content .list-item .label .icon {
+    height: 26rpx;
+    width: 26rpx;
+    margin-left: 1rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #999;
+}
+
+.list-content .list-item .label .icon>image {
+    height: 22rpx;
+}
+
+.list-content .list-item .label .label-text {
+    margin: 0 auto;
+    height: 100%;
+    font-size: 16rpx;
+    line-height: 26rpx;
+}
+
+.list-content .list-item .date-area {
+    margin-bottom: 10rpx;
+    display: flex;
+    align-items: center;
+}
+
+.list-content .list-item .date-area .date {
+    margin-right: 20rpx;
+    font-size: 26rpx;
+    color: #444;
+}
+
+.list-content .list-item .date-area .tip {
+    padding: 0 5rpx;
+    font-size: 20rpx;
+    color: #fff;
+    background-color: #111;
+}
+
+.list-content .list-item .date-area .tip.full {
+    padding: 0 5rpx;
+    font-size: 20rpx;
+    color: rgba(153, 153, 153, 0.616);
+    background-color: rgba(223, 219, 219, 0.37);
+}
+
+.list-content .list-item .address {
+    font-size: 24rpx;
+    color: #888;
+}
+
+.loading {
+    width: 100%;
+}
+
+.no-more {
+    text-align: center;
+    font-size: 26rpx;
+    color: #777;
+}

@@ -1,0 +1,55 @@
+/* components/tesla-input/index.wxss */
+input {
+    /* color: transparent; */
+    text-shadow: 0 0 0 #000;
+}
+
+.input-item {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-item .label {
+    padding: 20rpx 25rpx;
+    font-size: 26rpx;
+    color: #888888;
+}
+
+.input-item input {
+    padding: 24rpx 25rpx;
+    font-size: 30rpx;
+    background-color: #f7f7f7;
+    border-radius: 50rpx;
+    border: 1px solid #fff;
+}
+
+.input-item .error {
+    border-color: red;
+}
+
+.input-item .error-message {
+    position: absolute;
+    bottom: -32rpx;
+    left: 20rpx;
+    font-size: 22rpx;
+    color: red;
+}
+
+.tips {
+    position: absolute;
+    bottom: -40rpx;
+    right: 30rpx;
+    font-size: 20rpx;
+    color: #888;
+}
+
+.slot-right-item {
+    /* height: 25rpx; */
+    position: absolute;
+    bottom: 23rpx;
+    right: 25rpx;
+    font-size: 26rpx;
+    z-index: 99;
+}

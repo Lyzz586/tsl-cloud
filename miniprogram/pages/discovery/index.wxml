@@ -1,0 +1,32 @@
+<view class="discovery-page">
+    <view class="nav">
+        <van-tabs active="{{ active }}" bind:change="onChange" line-width="34rpx" line-height="3rpx" title-inactive-color="#666" color="#444" tab-active-class="tab-active" nav-class="van-nav" ellipsis="{{false}}" nav-right="search">
+
+            <van-tab title-style="font-weight:bold;font-size:24rpx;" title="推荐">
+                <view class="discovery-swiper">
+                    <swiper>
+                        <swiper-item>
+                            <image src="/images/lunbo.jpg"></image>
+                        </swiper-item>
+                        <swiper-item>
+                            <image src="/images/lunbo.jpg"></image>
+                        </swiper-item>
+                        <swiper-item>
+                            <image src="/images/lunbo.jpg"></image>
+                        </swiper-item>
+                    </swiper>
+                </view>
+            </van-tab>
+            <van-tab title="支持">内容 2</van-tab>
+            <van-tab title="充电">内容 3</van-tab>
+            <van-tab title="车主生活">内容 4</van-tab>
+
+
+            <view slot="nav-right" class="search">
+                <image src="/images/search.png"></image>
+            </view>
+        </van-tabs>
+    </view>
+
+
+</view>

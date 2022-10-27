@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+        "tesla-input":"/components/tesla-input/index",
+        "van-button": "@vant/weapp/button/index"
+    },
+    "navigationBarTitleText": "预约试乘试驾",
+    "navigationBarBackgroundColor": "#f7f7f7",
+    "backgroundColor":"#f7f7f7"
+}

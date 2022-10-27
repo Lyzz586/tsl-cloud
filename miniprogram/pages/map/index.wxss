@@ -1,0 +1,103 @@
+/* pages/map/index.wxss */
+.map {
+    width: 100vw;
+    height: 100vh;
+}
+
+.page {
+    position: relative;
+}
+
+.currntLocation {
+    width: 60rpx;
+    height: 60rpx;
+    position: absolute;
+    bottom: 40rpx;
+    right: 35rpx;
+}
+
+.markers-select-view {
+    height: 50rpx;
+    position: absolute;
+    top: 170rpx;
+    left: 44rpx;
+}
+
+.markers-content {
+    height: 50rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.markers-content .marker-box {
+    height: 50rpx;
+    display: flex;
+    margin-right: 22rpx;
+    align-items: center;
+    flex-direction: row;
+    box-shadow: 0 1px 5px rgba(0,0,0,.1);
+    background-color: #fff;
+    border-radius: 25rpx;
+}
+.markers-content .marker-box>image {
+    width: 48rpx;
+    height: 48rpx;
+    margin-left: 8rpx;
+    margin-right: 8rpx;
+    margin-top: 10rpx;
+    opacity: 0.3;
+}
+
+.markers-content .marker-box .title {
+    padding-right: 22rpx;
+    font-size: 24rpx;
+    opacity: 0.3;
+}
+
+.markers-content .marker-box.active>image {
+    opacity: 1;
+}
+
+.markers-content .marker-box.active .title {
+    opacity: 1;
+}
+
+.search-list {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 210rpx;
+    left: 0;
+}
+
+.search-list .search-box {
+    height: 80rpx;
+    display: flex;
+    padding: 0 45rpx 0 55rpx;
+    margin-bottom: 25rpx;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.search-list .search-box .search-icon {
+    margin-right: 30rpx;
+}
+
+.search-list .search-box .search-icon image{
+    width: 22rpx;
+    height: 22rpx;
+}
+
+
+.search-list .search-box .search-content .name{
+    font-weight: bold;
+    font-size: 24rpx;
+}
+
+.search-list .search-box .search-content .address {
+    padding-top: 10rpx;
+    color: #868687;
+    font-size: 20rpx;
+}

@@ -1,0 +1,33 @@
+<view class="location-page">
+    <view class="header">
+        <view class="content">
+            <view class="name">{{name}}</view>
+            <view class="address">{{address}}</view>
+            <view class="marker-category">
+                <view class="marker-category-item">{{markerCategory}}</view>
+            </view>
+        </view>
+        <view class="location" bindtap="goMap" >
+            <image src="/images/navigate.png"></image>
+            <view class="distance">{{distance}}</view>
+        </view>
+    </view>
+    <view class="info-area">
+        <view class="info-box">
+            <view class="title">时间信息</view>
+            <rich-text class="content" nodes="{{timeInfo}}"></rich-text>
+        </view>
+        <view class="info-box">
+            <view class="title">充电信息</view>
+            <rich-text class="content" nodes="{{chargingInfo}}"></rich-text>
+        </view>
+        <view class="info-box">
+            <view class="title">联系电话</view>
+            <view class="content" wx:key="index" wx:for="{{phone}}">{{item}}</view>
+        </view>
+        <view class="info-box">
+            <view class="title">车主服务</view>
+            <view class="content">{{phoneService}}</view>
+        </view>
+    </view>
+</view>

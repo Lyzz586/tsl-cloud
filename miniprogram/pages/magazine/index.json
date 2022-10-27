@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "document-player": "document-player-miniprogram"
+      }
+    
+}

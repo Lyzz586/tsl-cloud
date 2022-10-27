@@ -1,0 +1,6 @@
+<!--components/tesla-serch-input/index.wxml-->
+<view class="search-input">
+    <image class="search-icon" src="../../images/search.png"></image>
+    <input bindinput="onInput" placeholder-class="placeholder" value="{{value}}" type="text" />
+    <image bindtap="onCancel" wx:if="{{!iscleared}}" class="cancel-icon" src="../../images/cancel.png"></image>
+</view>

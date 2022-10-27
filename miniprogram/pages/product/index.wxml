@@ -1,0 +1,29 @@
+<!--pages/product/index.wxml-->
+<view class="page">
+    <view class="header">
+        <image class="cover" mode="aspectFill" src="{{product.cover}}"></image>
+        <view class="title">{{product.title}}</view>
+    </view>
+    <view class="content">
+        <rich-text class="description" nodes="{{product.description}}"></rich-text>
+        <scroll-view class="product-lines" scroll-x="true" style="width: 100%;height: 700rpx;">
+            <view style="{{'width:' + (product.productLine.length * 400) + 'rpx' }}">
+            <view class="product-box" wx:for="{{product.productLine}}" wx:key="index">
+                <view class="name">{{item.name}}</view>
+                <view class="config">
+                    <view class="label">起售价格</view>
+                    <view class="value">{{item.price}}</view>
+                </view>
+                <view class="config">
+                    <view class="label">轮胎尺寸</view>
+                    <view class="value">{{item.tire_size}}英寸</view>
+                </view>
+                <view class="config">
+                    <view class="label">续航</view>
+                    <view class="value">{{item.cltc}}公里</view>
+                </view>
+            </view>
+        </view>
+        </scroll-view>
+    </view>
+</view>

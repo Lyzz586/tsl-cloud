@@ -1,0 +1,37 @@
+<view class="activity-detail-page">
+    <image class="activity-banner" src="/images/lunbo.jpg"></image>
+    <view class="main">
+    <view class="header">
+        <view class="list-item">
+            <view class="name">{{activity.name}}</view>
+            <view class="label" wx:if="{{activity.type === 'exclusive'}}">
+                <view class="icon">
+                    <image mode="heightFix" src="/images/activity-selected.png"></image>
+                </view>
+                <view class="label-text">车主专属</view>
+            </view>
+            <view class="date-area">
+                <view class="date">{{activity.start_time}} - {{activity.end_time}} </view>
+                <view class="tip" wx:if="{{activity.status === 'registering'}}">报名中</view>
+                <!-- <view class="tip full">名额已满</view> -->
+                <!-- <view class="tip full">报名结束</view> -->
+                <view class="tip full" wx:if="{{activity.status === 'registertionEnd'}}">报名未开始</view>
+            </view>
+            <view class="address">{{activity.address}}</view>
+        </view>
+    </view>
+    <view class="detail" wx:if="{{activity.description}}">
+        <view class="label">活动详情</view>
+        <rich-text space="nbsp" nodes="{{activity.description}}"></rich-text>
+    </view>
+
+    <view class="footer">
+        <view class="registration-time">
+            报名时间：{{activity.start_time}} - {{activity.end_time}} 
+        </view>
+        <view class="registration-btn" bindtap="apply" data-id="{{activity._id}}">
+            立即报名
+        </view>
+    </view>
+</view>
+</view>

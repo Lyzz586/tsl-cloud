@@ -1,0 +1,143 @@
+<!--pages/car-calculator/index.wxml-->
+<view class="page">
+    <view class="container">
+        <view class="head-line">金融服务</view>
+
+        <view class="select-area">
+            <!-- 车型选择 -->
+            <view class="select-product">
+                <view class="title">选择感兴趣的车型</view>
+                <view class="select-item">
+                    <tesla-picker title="选择车系" bind:change="onProductSelected" defaultValue="{{product}}" options="{{products}}"></tesla-picker>
+                </view>
+                <view class="select-item">
+                    <tesla-picker title="选择车型" bind:change="onProductLineSelected" defaultValue="{{productLine}}" options="{{productLines}}"></tesla-picker>
+                </view>
+                <view class="select-item">
+                    <tesla-input label="车辆价格 (元)" value="{{price}}" label-class="label_class" i-class="i_class"></tesla-input>
+                </view>
+            </view>
+
+            <!-- 金融方案选择 -->
+            <view class="select-financial-solutions">
+                <view class="title">选择金融方案</view>
+                <view class="select-item">
+                    <tesla-input i-class="i_class" value="{{financialPlans[0]}}"></tesla-input>
+                    <tesla-input i-class="i_class" value="{{financialPlans[1]}}"></tesla-input>
+                </view>
+                <view class="details">
+                    通过Telsaxxxxxxxxxxxxxxxxxxxxxxxx,诶月份起贷款，嘻嘻嘻顶顶顶顶。<text class="more" bindtap="readMore">了解更多</text>
+                </view>
+
+                <view class="select-item">
+                    <tesla-picker title="金融产品" bindchange="onchange" defaultValue="{{financialProduct}}" options="{{financialProducts}}"></tesla-picker>
+                </view>
+                <view class="select-item">
+                    <tesla-picker title="期数" bindchange="onPeriodsChange" defaultValue="{{periods}}" options="{{periodsOptions}}"></tesla-picker>
+                </view>
+                <view class="select-item">
+                    <tesla-input label="首付/保证金比例 %" bind:input="onRateInput" value="{{rate}}" label-class="label_class" i-class="i_class"></tesla-input>
+                </view>
+                <view class="select-item">
+                    <tesla-input label="年化费率 %" value="{{annualizedRate}}" disabled="{{true}}" label-class="label_class" i-class="i_class" tips="折合年化利率7.30%"></tesla-input>
+                </view>
+            </view>
+
+            <!-- 在线预审申请 -->
+            <view class="online-pre-approval-application">
+                <view class="title">在线预审申请</view>
+                <view class="details">
+                    通过Telsaxxxxxxxxxxxxxxxxxxxxxxxx,诶月份起贷款，嘻嘻嘻顶顶顶顶。哒哒哒哒哒哒多多多多多多。
+                </view>
+
+                <view class="select-item">
+                    <tesla-picker title="上牌省份" defaultValue="{{currentProvince}}" labelKey="name" bind:change="onProvinceChange" options="{{provinces}}"></tesla-picker>
+                </view>
+                <view class="select-item">
+                    <tesla-picker title="上牌城市" defaultValue="{{currentCity}}" labelKey="name" bind:change="onCityChange" options="{{cities}}"></tesla-picker>
+                </view>
+                <view class="select-item">
+                    <tesla-picker title="上牌类型" defaultValue="个人"  labelKey="name" bind:change="onchange" options="[个人,企业]"></tesla-picker>
+                </view>
+
+            </view>
+
+            <!-- 选择金融服务机构 -->
+            <view class="banks-area">
+                <view class="bank-card">
+                    <view class="bank-item" wx:for="{{financeOrgs}}" wx:key="index">
+                        <image mode="heightFix" src="{{item.logo}}"></image>
+                    </view>
+                </view>
+                <view class="qrcode-area">
+                    <view class="tip">请使用微信二维码进行预审申请</view>
+                    <view class="qrcode">
+                        <image src="{{qrcode}}"></image>
+                    </view>
+                </view>
+            </view>
+
+            <view class="other-bank">
+                <view class="title">其他适用金通服务机构</view>
+                <view class="details">少时诵诗书所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所哒哒哒哒哒哒多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多哒哒哒哒哒哒多多多多多多多多多多所所所所所所所所所所所所所所所所所所所所所所所所所哒哒哒
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="copyright">
+        <view class="copyright-content">Tesla ewew</view>
+        <view class="copyright-content">Tesla ewew</view>
+        <view class="copyright-content">Tesla ewew</view>
+        <view class="copyright-content">Tesla ewew</view>
+        <view class="copyright-content">Tesla ewew</view>
+
+    </view>
+
+    <view class="action-box">
+        <view class="product-info {{isCollapse? 'collapse' : ''}}">
+            <image mode="widthFix" src="{{currentProductImg}}"></image>
+            <view class="product-name">{{product}}</view>
+            <view class="product-version">{{productLine}}</view>
+        </view>
+        <view class="head">
+            <view class="title">计算结果</view>
+            <image bindtap="showCard" src="{{isCollapse? '/images/minus-circle.png': '/images/plus-circle.png'}}" style="height: 40rpx;width: 40rpx;"></image>
+        </view>
+        <view class="content">
+            <view class="payment-item">
+                <view class="name">首付款/保证金</view>
+                <view class="calculation-res">￥{{downPayment}}</view>
+            </view>
+            <view class="payment-item {{!isCollapse? 'hide' : '' }}">
+                <view class="name">贷款/融资金额</view>
+                <view class="calculation-res">￥{{loan}}</view>
+            </view>
+            <view class="payment-item {{!isCollapse? 'hide' : '' }}">
+                <view class="name">尾款比例</view>
+                <view class="calculation-res">0 %{{price}}</view>
+            </view>
+            <view class="payment-item {{!isCollapse? 'hide' : '' }}">
+                <view class="name">尾款金额</view>
+                <view class="calculation-res">￥0{{price}}</view>
+            </view>
+            <view class="payment-item" >
+                <view class="name">月供</view>
+                <view class="calculation-res month-payment">￥{{monthlyPayment}}</view>
+            </view>
+        </view>
+        <view class="explanation {{!isCollapse? 'hide' : '' }}">少时诵诗书所所所所所所所所所所所所所所所所所所所所
+        所所所所所所所所所所所所所所所所所所所所少时诵诗书所所所所所所所所所少时诵诗书所少时诵诗书所所所所所所所所所所所所所</view>
+    </view>
+
+    <page-container show="{{isLearnMoreShow}}" duration="800" z-index="999" round="{{true}}">
+        <view class="popup-area">
+            <view class="learn-more-popup">
+                <view class="title">Tesla金融方案</view>
+                <view class="content">
+                    dddddddddddddddddddddddd鞍山市所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所少时诵诗书所所所所所所所所所所所所所所所所 所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所dddddddddddddddddddddddd鞍山市所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所少时诵诗书所所所所所所所所所所所所所所所所 所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所dddddddddddddddddddddddd鞍山市所所所所所所所所所
+                </view>
+            </view>
+        </view>
+    </page-container>
+</view>

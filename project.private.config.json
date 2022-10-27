@@ -1,0 +1,92 @@
+{
+    "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+    "projectname": "tesla",
+    "setting": {
+        "compileHotReLoad": true,
+        "urlCheck": false,
+        "bigPackageSizeSupport": true
+    },
+    "condition": {
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "产品详情",
+                    "pathName": "pages/product/index",
+                    "query": "id=14bec23b6326e1b9000e4e3003e61b2e",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "预约页面",
+                    "pathName": "pages/test-drive/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "杂志页面",
+                    "pathName": "pages/magazine/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "地图页面",
+                    "pathName": "pages/map/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "marker详情",
+                    "pathName": "pages/map/location",
+                    "query": "id=6f1c6d416332d3a90056f4700216c1ed",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "贷款计算器",
+                    "pathName": "pages/car-calculator/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "视频页面",
+                    "pathName": "pages/video/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "活动页面",
+                    "pathName": "pages/activity/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "活动详情",
+                    "pathName": "pages/activity/detail",
+                    "query": "id=23003c1963452dbe008e4abc33c5921f",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "活动报名页面",
+                    "pathName": "pages/activity/apply",
+                    "query": "id=23003c1963452dbe008e4abc33c5921f",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "发现页面",
+                    "pathName": "pages/discovery/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}

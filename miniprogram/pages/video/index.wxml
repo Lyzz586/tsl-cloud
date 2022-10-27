@@ -1,0 +1,41 @@
+<view class="video-page">
+    <view class="video-player">
+        <!-- <view class="video"></view> -->
+        <video enable-flex id="myVideo" src="{{videoSrc}}" class="video"></video>
+        <view class="video-title">{{title}}</view>
+    </view>
+
+    <view class="video-list-area">
+        <view class="product-name" bindtap="onCarModelTap">{{currentCarModel}}<image src="/images/ic_arrow_down.svg"></image>
+        </view>
+            <!-- 如果当前车模型的category属性存在，渲染下面这部分 -->
+            <scroll-view class="video-category-area" scroll-x wx:if="{{isFirstProdct}}">
+                <view class="video-category-list" style="width:  {{videoCategory.length * 180}}rpx;">
+                    <view class="video-category-item"  wx:for="{{videoCategory}}" wx:key="index">
+                        {{item.title}}
+                    </view>
+                </view>
+            </scroll-view>
+
+        <view class="video-list">
+            <view class="video-item" wx:for="{{videosTree}}" wx:key="index">
+                <view wx:if="{{item.title}}" class="video-list-title">{{item.title}}</view>
+                <view class="video-list-items">
+                    <view class="video-list-box" bindtap="onCurrentVideo" data-video="{{item}}" wx:for="{{item.video}}" wx:key="index">
+                        <image class="video-list-item" src="{{item.cover}}"> </image>
+                        <view class="video-item-name">{{item.title}}</view>
+                    </view>
+                </view>
+            </view>
+
+        </view>
+    </view>
+
+    <van-action-sheet
+  show="{{ showCarModelSelection }}"
+  actions="{{ actions }}"
+  bind:close="onClose"
+  bind:select="onSelect"
+  safe-area-inset-bottom
+/>
+</view>

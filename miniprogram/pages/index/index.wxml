@@ -1,0 +1,74 @@
+<!--index.wxml-->
+<view class="page">
+    <tesla-swiper style="width: 100%;" list="{{ List }}"
+    bind:on-book-btn-click="onSwiperBookClick"
+    ></tesla-swiper>
+
+    <view class="magazine" wx:for="{{magazine}}" wx:key="index">
+        <view class="title">
+            T-ZONE
+        </view>
+        <image  bindtap="clickMagazine"  data-id="{{item._id}}" class="cover" src="{{item.cover}}"></image>
+        <view class="name">{{item.name}}</view>
+    </view>
+
+    <view class="icon-banner" bindtap="gotoCarCalculator">
+        <image class="banner-bg credit-card" src="../../images/card-image.jpg"></image>
+        <view class="content">
+
+            <view class="title">
+                贷款计算器
+            </view>
+            <view class="subtitle">
+                定制我的金融方案
+            </view>
+        </view>
+    </view>
+    <view class="icon-banner" bindtap="gotoVideo">
+        <image class="banner-bg" src="../../images/lunbo.jpg"></image>
+        <view class="content">
+
+            <view class="title">
+               新手视频
+            </view>
+            <view class="subtitle">
+               观看视频
+            </view>
+
+        </view>
+    </view>
+
+    <view class="icon-box-area">
+        <view class="icon-box">
+            <image class="icon" mode="widthFix" src="../../images/ic_clean_engry_policy.svg"></image>
+            <view class="title">新能源政策</view>
+        </view> 
+        <view class="icon-box">
+            <image class="icon cicle" mode="widthFix" src="../../images/ic_traidin.svg"></image>
+            <view class="title">车辆置换</view>
+        </view>
+    </view>
+
+    <page-container 
+        show="{{isModelShow}}"
+        round="{{true}}"
+        overlay="{{true}}"
+        position="{{'bottom'}}"
+        close-on-slide-down="{{false}}"
+        custom-style="{{'z-index:9999;'}}"
+        overlay-style="{{'z-index:9999'}}"
+    >
+    <view class="popup-menu">
+        <view class="header">
+            <view class="title">选择车型</view>
+            <image class="close-icon" src="../../images/ic_close_dark.svg"></image>
+        </view>
+        <view class="content">
+            <view class="item-box" wx:for="{{products}}" wx:key="index" bindtap="clickProduct" data-id="{{item._id}}">
+                <view class="title">{{item.title}}</view>
+                <image src="{{item.carPic}}"></image>
+            </view>
+        </view>
+    </view>
+</page-container>
+</view>

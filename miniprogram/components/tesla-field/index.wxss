@@ -1,0 +1,10 @@
+.input {
+    position: relative;
+}
+.error-message {
+    position: absolute;
+    bottom: -35rpx;
+    left: 18rpx;
+    font-size: 22rpx;
+    color: rgb(247, 0, 0);
+}

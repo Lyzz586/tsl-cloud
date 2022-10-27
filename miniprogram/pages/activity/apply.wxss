@@ -1,0 +1,14 @@
+/* pages/activity/apply.wxss */
+
+.activity-apply-page {
+    width: 100vw;
+    height: 100vh;
+    padding: 40rpx;
+    box-sizing: border-box;
+    
+}
+
+.activity-apply-input {
+    margin-bottom: 50rpx;
+}
+

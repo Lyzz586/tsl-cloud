@@ -1,0 +1,278 @@
+/* pages/car-calculator/index.wxss */
+.page {
+    width: 100vw;
+
+}
+
+.container {
+    margin: 40rpx 50rpx;
+}
+
+.container .head-line {
+    margin-bottom: 45rpx;
+    font-size: 40rpx;
+}
+
+.container .select-area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.select-area .select-product {
+    margin-bottom: 80rpx;
+}
+
+.container .select-area .title {
+    margin-bottom: 20rpx;
+    font-size: 24rpx;
+    font-weight: bold;
+}
+
+.page .select-area .label_class {
+    padding: 0 0 10rpx 30rpx;
+    font-size: 22rpx;
+    color: #000;
+}
+
+.select-area .i_class {
+    padding: 15rpx 25rpx;
+    margin: 0;
+    font-size: 28rpx;
+}
+
+
+.select-item {
+    margin-top: 55rpx;
+}
+
+.i_class {
+    margin-bottom: 30rpx;
+}
+
+.select-financial-solutions {
+    margin-bottom: 85rpx;
+}
+
+
+.select-financial-solutions .select-item .i_class:first-child {
+    border: 4rpx solid rgb(29, 29, 204);
+    margin-bottom: 30rpx;
+}
+
+.details {
+    padding: 25rpx 0;
+    font-size: 24rpx;
+}
+
+.details .more {
+    text-decoration: underline;
+}
+
+.popup-area {
+    width: 100vw;
+    height: 80vh;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.learn-more-popup {
+    padding: 60rpx 20rpx;
+}
+
+.learn-more-popup .title {
+    padding: 0 0 50rpx 80rpx;
+    font-size: 36rpx;
+    font-weight: bold;
+}
+
+.learn-more-popup .content {
+    margin: 0 30rpx;
+}
+
+.select-financial-solutions>.select-item:last-child .label_class {
+    opacity: .6;
+}
+
+.select-financial-solutions>.select-item:last-child .i_class {
+    opacity: .6;
+}
+
+.online-pre-approval-application {
+    margin-bottom: 80rpx;
+}
+
+.banks-area {
+    margin-bottom: 100rpx;
+}
+
+.banks-area .bank-card {
+    margin-bottom: 50rpx;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.banks-area .bank-card .bank-item {
+    width: 300rpx;
+    height: 80rpx;
+    margin-bottom: 20rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20rpx;
+    border: 1px solid #999;
+    background-color: #fff;
+}
+
+.banks-area .bank-card .bank-item image {
+    height: 50rpx;
+}
+
+.banks-area .qrcode-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banks-area .qrcode-area .tip {
+    margin-bottom: 30rpx;
+    font-size: 26rpx;
+    color: #888;
+}
+
+.banks-area .qrcode-area .qrcode image {
+    width: 340rpx;
+    height: 340rpx;
+    background-color: darkblue
+}
+
+.other-bank {
+    margin-bottom: 100rpx;
+}
+
+.select-area .other-bank .title {
+    margin-bottom: 5rpx;
+}
+
+.select-area .other-bank .details {
+    padding: 0;
+}
+
+.copyright {
+    margin-bottom: 500rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.copyright .copyright-content {
+    margin-bottom: 23rpx;
+    font-size: 26rpx;
+    color: #888;
+}
+
+/* 底部盒子 */
+
+.action-box {
+    /* height: 75vh; */
+    width: 88vw;
+    padding: 40rpx 32rpx 0 32rpx;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color:#fff;
+    box-shadow: 0 1px .8px 0 rgba(0, 0, 0, 0.2), 0 3px 7px 0 rgba(0, 0, 0, 0.19);
+    box-sizing: border-box;
+    z-index: 999;
+}
+
+
+.action-box .product-info {
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    opacity: 1;
+    transition: all 1s;
+    /* transform: translateZ(0); */
+}
+
+.action-box .product-info.collapse {
+    height: 455rpx;
+    margin-bottom: 30rpx;
+    transition: all .7s;
+    transform: translateZ(0);
+}
+
+.action-box .product-info image {
+    width: 500rpx;
+    margin-bottom: 90rpx;
+}
+
+.action-box .head {
+    padding-top: 30rpx;
+    padding-bottom: 30rpx;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(200, 200, 200, .8);
+}
+
+.action-box .head .title {
+    font-weight: bold;
+    transform: translateZ(0);
+}
+
+.action-box .content {
+    padding: 30rpx 0 23rpx 0;
+}
+
+.action-box .content .payment-item {
+    margin-bottom: 14rpx;
+    display: flex;
+    justify-content: space-between;
+    transition: all 1s;
+    transform: translateZ(0);
+}
+
+.action-box .content .payment-item.hide {
+    height: 0;
+    overflow: hidden;
+    transition: all 1s;
+    transform: translateZ(0);
+}
+
+.action-box .content .payment-item .name {
+    font-size: 26rpx;
+    color: #222;
+}
+
+.action-box .content .payment-item .calculation-res {
+    font-size: 26rpx;
+}
+
+.action-box .content .payment-item .month-payment {
+    font-size: 30rpx;
+}
+
+
+.action-box .explanation {
+    margin-bottom: 20rpx;
+    font-size: 24rpx;
+    color:#999;
+    text-align-last: center;
+    line-height: 36rpx;
+    transition: all 1s;
+    transform: translateZ(0);
+
+}
+
+.action-box .explanation.hide {
+    height: 0;
+    overflow: hidden;
+    transition: all 2s;
+    /* transform: translateZ(0); */
+}

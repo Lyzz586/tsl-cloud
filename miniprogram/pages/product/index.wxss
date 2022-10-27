@@ -1,0 +1,62 @@
+/* pages/product/index.wxss */
+
+.header {
+    width: 100%;
+    height: 744rpx;
+    position: relative;
+}
+
+.header .cover {
+    width: 100%;
+    height: 100%;
+}
+
+.header .title {
+    width: 100%;
+    position: absolute;
+    top: 90rpx;
+    text-align: center;
+    font-size: 78rpx;
+
+}
+
+.content {
+    margin-top: 52rpx;
+    padding: 0 48rpx;
+}
+
+/* .content .description {
+
+} */
+
+.content .product-box {
+    width: 400rpx;
+    margin-top: 112rpx;
+    float: left;
+}
+
+.product-box .name {
+    width: 300rpx;
+    height: 104rpx;
+    overflow: hidden;
+    font-size: 28rpx;
+    line-height: 50rpx;
+    font-weight: 600;
+    /*限制在一个块元素显示的文本的行数*/
+    line-clamp: 2;
+    border-bottom: 2rpx solid #c3c3c3;
+}
+
+.product-box .config {
+    margin-top: 44rpx;
+}
+
+.product-box .config .label {
+    font-size: 24rpx;
+    color: #c3c3c3;
+    margin-bottom: 28rpx;
+}
+
+.product-box .config .value {
+    font-size: 28rpx;
+}

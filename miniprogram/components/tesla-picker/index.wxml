@@ -1,0 +1,6 @@
+<!--components/tesla-picker/index.wxml-->
+<view wx:if="{{title}}" class="label">{{ title }}</view>
+<picker bindchange="change" class="picker" labelKey="{{labelKey}}" range="{{optionList}}" value="{{index}}">
+    <tesla-input disabled="{{true}}" i-class="i_class" value="{{value}}"></tesla-input>
+    <image src="/images/ic_arrow_down.svg" class="arrow-down"></image>
+</picker>

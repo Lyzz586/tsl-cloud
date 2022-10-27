@@ -1,0 +1,31 @@
+<view class="activity-apply-page">
+<view class="activity-apply-input">
+    <van-row>
+        <van-col span="24">
+            <tesla-field class="tesla-input" required model:value="{{email}}" rules="{{[{type:'email'}]}}" placeholder="邮箱"></tesla-field>
+        </van-col>
+    </van-row>
+    <van-row gutter="20">
+        <van-col span="12">
+            <tesla-field class="tesla-input" required model:value="{{lastName}}"  placeholder="姓氏"></tesla-field>
+        </van-col>
+        <van-col span="12">
+            <tesla-field class="tesla-input" required model:value="{{firstName}}" placeholder="名字"></tesla-field>
+        </van-col>
+    </van-row>
+    <van-row>
+        <van-col span="24">
+            <tesla-field class="tesla-input" required model:value="{{phone}}" rules="{{[{type:'phone'}]}}" placeholder="手机"></tesla-field>
+        </van-col>
+    </van-row>
+    <van-row>
+        <van-col span="24">
+            <tesla-field class="tesla-input" model:value="{{remark}}" placeholder="备注" type="textarea"></tesla-field>
+        </van-col>
+    </van-row>
+</view>
+
+
+    <van-button type="info" block round custom-style="height:90rpx;font-size:30rpx;" bindtap="onforminput">确认</van-button>
+
+</view>

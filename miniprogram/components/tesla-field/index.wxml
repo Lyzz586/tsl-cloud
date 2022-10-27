@@ -1,0 +1,14 @@
+<view class="input">
+<van-field
+    model:value="{{ value }}"
+    bind:blur="onBlur"
+    required="{{required}}"
+    placeholder="{{placeholder}}"
+    border="{{ false }}"
+    type="{{type}}"
+    autosize="{ maxHeight: 200, minHeight: 100 }"
+    placeholder-style="font-size:30rpx"
+    custom-style="padding-left:50rpx;margin-bottom:50rpx;background-color: #f7f7f7;border-radius: 50rpx"
+  />
+  <view wx:if="{{ error }}" class="error-message">{{errorMessage}}</view>
+</view>

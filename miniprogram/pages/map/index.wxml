@@ -1,0 +1,32 @@
+<view class="page">
+    <map wx:if="{{!isInputting}}" 
+    class="map" id="myMap" 
+    latitude="{{latitude}}" longitude="{{longitude}}" 
+    markers="{{markers}}" bindmarkertap="onMarkerTop" 
+    show-location
+    ></map>
+    <image bindtap="toCurrentLocation" class="currntLocation" src="../../images/location.png"></image>
+    <tesla-search-input bind:onClear="clickClear" bind:search="onSearch" style="position: absolute;top: 104rpx; left: 44rpx;z-index: 1;"> </tesla-search-input>
+    <scroll-view wx:if="{{!isInputting}}" class="markers-select-view" scroll-x>
+        <view class="markers-content" style="{{'width:'+ (218*markersCategory.length)  + 'rpx;'}}">
+            <view wx:for="{{markersCategory}}" wx:key="index" class="marker-box {{item.isActive? 'active' :'a'}}" bindtap="clickMarkersCategory" data-id="{{item.id}}">
+                <image src="{{item.icon}}"></image>
+                <view class="title">{{item.title}}</view>
+            </view>
+        </view>
+    </scroll-view>
+
+    <view wx:if="{{isInputting}}" class="search-list">
+        <view class="search-area">
+            <view class="search-box" wx:for="{{locationResult}}" bindtap="gotoLocation" data-location="{{item}}" wx:key="index">
+                <view class="search-icon">
+                    <image mode="aspectFit" src="/images/location_search.png"></image>
+                </view>
+                <view class="search-content">
+                    <view class="name">{{item.name}}</view>
+                    <view class="address">{{item.addr}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

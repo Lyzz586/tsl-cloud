@@ -1,0 +1,32 @@
+<view class="activity-page">
+    <view class="location">
+        <image mode="heightFix" src="/images/location_search.png"></image>
+        <view class="name">{{currentCity}}</view>
+        <view class="toggle" bindtap="changeProvince">切换</view>
+    </view>
+    <view class="list">
+        <view class="title">最新活动</view>
+        <view class="list-content">
+            <view class="list-item" wx:for="{{activityInfo}}" wx:key="index" data-id="{{item._id}}" bindtap="goToDetail">
+                <view class="name">{{item.name}}</view>
+                <view class="label" wx:if="{{item.type === 'exclusive'}}">
+                    <view class="icon">
+                        <image mode="heightFix" src="/images/activity-selected.png"></image>
+                    </view>
+                    <view class="label-text" >车主专属</view>
+                </view>
+                <view class="date-area">
+                    <view class="date">{{item.start_time}} - {{item.end_time}} </view>
+                    <view class="tip" wx:if="{{item.status === 'registering'}}">报名中</view>
+                    <!-- <view class="tip full">名额已满</view> -->
+                    <!-- <view class="tip full">报名结束</view> -->
+                    <view class="tip full" wx:if="{{item.status === 'registertionEnd'}}">报名未开始</view>
+                </view>
+                <view class="address">{{item.address}}</view>
+            </view>
+        </view>
+
+        <van-loading wx:if="{{isLoading}}" size="24px" custom-class="loading" vertical>加载中...</van-loading>
+    </view>
+    <view wx:if="{{noMore}}" class="no-more">没有更多了</view>
+</view>

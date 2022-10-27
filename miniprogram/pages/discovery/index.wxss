@@ -1,0 +1,42 @@
+.discovery-page {
+    width: 100vw;
+    height: 100vh;
+    padding: 0 30rpx;
+    box-sizing: border-box;
+}
+
+.tab-active {
+    font-weight: bold !important;
+    font-size: 28rpx !important;
+}
+
+.van-nav {
+    width: 400rpx !important;
+
+}
+
+.search {
+    display: flex;
+    align-self: center;
+    width: 35rpx;
+    height: 35rpx;
+}
+
+.search>image {
+    width: 100%;
+    height: 100%;
+}
+
+.discovery-swiper {
+    height: 300rpx;
+    width: 100%;
+    margin-top: 10rpx;
+    border-radius: 25rpx;
+}
+
+.discovery-swiper image {
+    width: 100%;
+    height: 100%;
+    border-radius: 25rpx;
+    border: 1px solid rgba(240, 240, 240, 0.5);
+}

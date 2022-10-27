@@ -1,0 +1,10 @@
+<!--components/tesla-input/index.wxml-->
+<view class="input-item">
+    <view wx:if="{{label}}" class="label label-class">{{ label }}</view>
+    <input maxlength="28" disabled="{{disabled}}" focus="{{true}}" class="{{ isError ? 'error' : ''}}  i-class" bindblur="oninput" model:value="{{value}}"/>
+    <view wx:if="{{tips}}" class="tips">{{tips}}</view>
+    <view wx:if="{{ isError }}" class="error-message">{{errorMessage}}</view>
+    <view class="slot-right-item">
+        <slot name="right-item"></slot>
+    </view>
+</view>
